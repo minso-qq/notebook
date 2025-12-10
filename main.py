@@ -21,6 +21,6 @@ def print_menu():
         input()
 
 def main():
-    print_menu()
+    print_menu() #основной блок кода
 
 main()
