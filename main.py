@@ -7,6 +7,8 @@ def add_new_note():
 
 def pop_old_note():
     print_all_notes()
+    if len(notes) == 0:
+        return
     pop_index = int(input("Введите номер записи, которой хотите удалить: ")) - 1
     notes.pop(pop_index) 
     print("Запись была удалена")
