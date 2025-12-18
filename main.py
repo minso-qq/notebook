@@ -1,4 +1,5 @@
 notes = []
+
 def add_new_note():
     new_note = input("Введите новую запись: ")
     notes.append(new_note) 
@@ -10,7 +11,12 @@ def pop_old_note():
     input("Удалить запись")
 
 def print_all_notes():
-    input()
+    number = 0
+    for note in notes:
+        number += 1
+        print(f"Номер записи - {number} сама запись: \"{note}\"")
+    if number == 0: 
+        print("У вас ещё нет записей!")
 
 def print_menu():
     print("_______________________________________")
@@ -30,14 +36,13 @@ def print_menu():
         command = int(input("Введите команду: "))
         if command == 1:
             # делаем вызов функции которая отвечает за просмотр записей
-            print("Посмотреть имеющиеся")
+            print_all_notes()
             count_1 += 1
 
         elif command == 2:
             # делаем вызов функции которая отвечает за добавление записи
-            print("Добавить новую запись")
-            count_2 += 1
             add_new_note()
+            count_2 += 1
 
         elif command == 3:
             # делаем вызов функции которая отвечает за удаление конкретной записи
