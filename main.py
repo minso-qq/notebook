@@ -6,9 +6,10 @@ def add_new_note():
     print("Запись добавлена!")
 
 def pop_old_note():
-    input("Напишите запись, которую хотите удалить: ")
-
-    input("Удалить запись")
+    print_all_notes()
+    pop_index = int(input("Введите номер записи, которой хотите удалить: ")) - 1
+    notes.pop(pop_index) 
+    print("Запись была удалена")
 
 def print_all_notes():
     number = 0
@@ -46,7 +47,8 @@ def print_menu():
 
         elif command == 3:
             # делаем вызов функции которая отвечает за удаление конкретной записи
-            print("Удалить запись")
+            pop_old_note()
+        
             count_3 += 1
 
         elif command == 4:
